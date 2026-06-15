@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Manager</title>
+    <link rel="stylesheet" href="/src/styles/style.css">
+</head>
+
+<body>
+
+    <h1>Personal Finance Manager</h1>
+
+    <!-- Dashboard -->
+    <section id="dashboard">
+        <h2>Dashboard</h2>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Balance</h3>
+                <p id="balance">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Income</h3>
+                <p id="income">0</p>
+            </div>
+
+            <div class="card">
+                <h3>Total Expense</h3>
+                <p id="expense">0</p>
+            </div>
+        </div>
+
+        <!-- Budget Progress Bar -->
+        <div class="budget-progress">
+            <h3>Budget vs Spending</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+            <div id="budget-status">
+                <span id="spent-amount">0</span> / <span id="total-budget">0</span>
+                (<span id="budget-percent">0</span>%)
+            </div>
+            <div id="budget-message"></div>
+        </div>
+    </section>
+
+    <!-- Month Filter -->
+    <section>
+        <h2>Month Filter</h2>
+
+        <input type="month" id="month-picker">
+    </section>
+
+    <!-- Category Management -->
+    <section>
+        <h2>Categories</h2>
+
+        <input type="text" id="category-name" placeholder="Category Name">
+
+        <input type="number" id="category-limit" placeholder="Limit">
+
+        <button id="add-category-btn">
+            Add Category
+        </button>
+
+        <div id="category-list"></div>
+    </section>
+
+    <!-- Transaction Management -->
+    <section>
+        <h2>Transactions</h2>
+
+        <div class="transaction-type">
+            <label>
+                <input type="radio" name="transaction-type" value="expense" checked> Chi tiêu
+            </label>
+            <label>
+                <input type="radio" name="transaction-type" value="income"> Thu nhập
+            </label>
+        </div>
+
+        <input type="number" id="amount" placeholder="Amount">
+
+        <select id="category-select">
+            <option value="">
+                Select Category
+            </option>
+        </select>
+
+        <input type="text" id="note" placeholder="Note">
+
+        <input type="date" id="date">
+
+        <button id="add-transaction-btn">
+            Add Transaction
+        </button>
+
+        <div id="transaction-list"></div>
+    </section>
+
+    <!-- Budget Alerts -->
+    <section>
+        <h2>Budget Alerts</h2>
+
+        <div id="alert-container"></div>
+    </section>
+
+    <!-- Summary -->
+    <section>
+        <h2>Monthly Summary</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Month</th>
+                    <th>Income</th>
+                    <th>Expense</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+
+            <tbody id="summary-table-body">
+            </tbody>
+        </table>
+    </section>
+
+    <script type="module" src="/src/app.ts"></script>
+
+</body>
+
+</html>
