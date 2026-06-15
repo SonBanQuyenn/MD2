@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+.dashboard-cards {
+    display: flex;
+    gap: 15px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    min-width: 150px;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+#category-list,
+#transaction-list {
+    margin-top: 15px;
+}
+
+.category-row,
+.transaction-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+/* Budget Progress Bar */
+.budget-progress {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.progress-bar-container {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress-bar-fill {
+    background-color: #4caf50;
+    width: 0%;
+    height: 100%;
+    transition: width 0.3s ease;
+    border-radius: 10px;
+}
+
+.progress-bar-fill.exceeded {
+    background-color: #f44336;
+}
+
+#budget-status {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+#budget-message {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.income {
+    color: #4caf50;
+}
+
+.expense {
+    color: #f44336;
+}
+
+.alert {
+    color: red;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Button styles */
+button {
+    cursor: pointer;
+    padding: 6px 12px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.delete-btn,
+.delete-transaction-btn {
+    background-color: #dc3545;
+}
+
+.delete-btn:hover,
+.delete-transaction-btn:hover {
+    background-color: #c82333;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}
+
+/* Form inputs */
+input,
+select {
+    padding: 8px;
+    margin: 5px 5px 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+    .dashboard-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        min-width: auto;
+    }
+
+    .category-row,
+    .transaction-row {
+        flex-direction: column;
+    }
+
+    .category-row div:last-child,
+    .transaction-row div:last-child {
+        margin-top: 10px;
+    }
+
+    button {
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    input,
+    select {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    section {
+        padding: 0 10px;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    th,
+    td {
+        padding: 6px;
+    }
+}
