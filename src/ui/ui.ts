@@ -249,6 +249,7 @@ export function setupTransactionForm(): void {
         renderTransactions();
         renderDashboard();
         renderCategories();
+        renderMonthlySummary();
     });
 }
 
@@ -265,6 +266,7 @@ function setupDeleteTransactionButtons(): void {
             renderTransactions();
             renderDashboard();
             renderCategories();
+            renderMonthlySummary();
         });
     });
 }
